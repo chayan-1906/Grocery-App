@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GroceryItemActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+	android:id="@+id/btnAddToCart"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginStart="15dp"
+	android:layout_marginEnd="15dp"
+	android:layout_marginTop="10dp"
+	android:text="Add to Cart"
+	android:textSize="25sp"
+	android:textStyle="bold"/>
+
+    <androidx.core.widget.NestedScrollView
+	android:id="@+id/nestedScrollViewGroceryItem"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_below="@id/btnAddToCart"
+	android:layout_marginTop="10dp"
+	android:paddingHorizontal="10dp">
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+
+	    <RelativeLayout
+		android:id="@+id/firstRelativeLayout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<TextView
+		    android:id="@+id/textViewName"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Name"
+		    android:textSize="18sp"
+		    android:textStyle="bold"/>
+
+		<TextView
+		    android:id="@+id/textViewPrice"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentEnd="true"
+		    android:text="Price"
+		    android:textSize="16sp"
+		    android:textStyle="bold"
+		    android:textColor="@color/primaryTextColor"/>
+
+	    </RelativeLayout>
+
+	    <ImageView
+		android:id="@+id/imageViewItem"
+		android:layout_width="250dp"
+		android:layout_height="250dp"
+		android:layout_below="@id/firstRelativeLayout"
+		android:layout_centerHorizontal="true"
+		android:src="@mipmap/ic_launcher"/>
+
+	    <TextView
+		android:id="@+id/textViewAvailability"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:layout_below="@id/imageViewItem"
+		android:text="No Item Available" />
+
+	    <TextView
+		android:id="@+id/textViewDescription"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/textViewAvailability"
+		android:layout_marginTop="10dp"
+		android:text="Description is here"
+		android:textStyle="italic"/>
+	    
+	    <RelativeLayout
+		android:id="@+id/relativeLayoutRating"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/textViewAvailability"
+		android:layout_alignParentEnd="true">
+
+		<RelativeLayout
+		    android:id="@+id/firstStarRelativeLayout"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content">
+
+		    <ImageView
+			android:id="@+id/imageViewFirstEmptyStar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/ic_empty_star"/>
+
+		    <ImageView
+			android:id="@+id/imageViewFirstFilledStar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/ic_filled_star"
+			android:visibility="gone"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+		    android:id="@+id/secondStarRelativeLayout"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_toEndOf="@id/firstStarRelativeLayout">
+
+		    <ImageView
+			android:id="@+id/imageViewSecondEmptyStar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/ic_empty_star"/>
+
+		    <ImageView
+			android:id="@+id/imageViewSecondFilledStar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/ic_filled_star"
+			android:visibility="gone"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+		    android:id="@+id/thirdStarRelativeLayout"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_toEndOf="@id/secondStarRelativeLayout">
+
+		    <ImageView
+			android:id="@+id/imageViewThirdEmptyStar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/ic_empty_star"/>
+
+		    <ImageView
+			android:id="@+id/imageViewThirdFilledStar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/ic_filled_star"
+			android:visibility="gone"/>
+
+		</RelativeLayout>
+
+	    </RelativeLayout>
+
+	    <TextView
+		android:id="@+id/textViewReviewExplained"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/textViewDescription"
+		android:layout_marginTop="25dp"
+		android:layout_marginStart="10dp"
+		android:text="Review: "
+		android:textStyle="italic|bold"/>
+
+	    <RelativeLayout
+		android:id="@+id/addReviewRelativeLayout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/textViewReviewExplained"
+		android:layout_marginTop="5dp">
+
+		<ImageView
+		    android:id="@+id/imageViewAddReview"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:src="@drawable/ic_add"/>
+
+		<TextView
+		    android:id="@+id/textViewAddReview"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_toEndOf="@id/imageViewAddReview"
+		    android:layout_marginStart="10dp"
+		    android:text="(Add a review)"
+		    android:textColor="@color/primaryTextColor"/>
+
+	    </RelativeLayout>
+
+	    <androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/recyclerViewReviews"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/addReviewRelativeLayout"
+		android:layout_marginTop="10dp"/>
+
+	</RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

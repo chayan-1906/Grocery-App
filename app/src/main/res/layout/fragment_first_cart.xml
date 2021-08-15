@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+	android:id="@+id/textViewCartExplain"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Items in your cart"
+	android:textSize="16sp"
+	android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+	android:id="@+id/recyclerView"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_above="@id/textViewSum"
+	android:layout_below="@id/textViewCartExplain"
+	android:layout_marginTop="10dp"
+	android:layout_marginBottom="10dp" />
+
+    <TextView
+	android:id="@+id/textViewNoItem"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_centerInParent="true"
+	android:text="no items in your cart"
+	android:textStyle="italic"
+	android:visibility="gone" />
+
+    <TextView
+	android:id="@+id/textViewSumExplain"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_above="@id/btnNext"
+	android:layout_marginEnd="5dp"
+	android:layout_marginBottom="20dp"
+	android:layout_toStartOf="@+id/textViewSum"
+	android:text="SUM:"
+	android:textColor="@color/primaryTextColor" />
+
+    <TextView
+	android:id="@+id/textViewSum"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_above="@id/btnNext"
+	android:layout_alignParentEnd="true"
+	android:layout_marginEnd="10dp"
+	android:layout_marginBottom="20dp"
+	android:text="0 $"
+	android:textColor="@color/primaryTextColor"
+	android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+	android:id="@+id/btnNext"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_alignParentBottom="true"
+	android:layout_centerHorizontal="true"
+	android:layout_marginBottom="10dp"
+	android:background="@color/primaryLightColor"
+	android:text="next"
+	android:textColor="@color/primaryTextColor" />
+
+</RelativeLayout>

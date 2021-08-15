@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="200dp"
+    android:layout_height="160dp"
+    android:padding="10dp"
+    android:orientation="vertical"
+    app:cardElevation="2dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content">
+
+	<ImageView
+	    android:id="@+id/imageViewItem"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_marginBottom="20dp"
+	    android:layout_centerHorizontal="true"
+	    android:src="@color/ic_launcher_background"/>
+
+	<TextView
+	    android:id="@+id/textViewPrice"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentEnd="true"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginEnd="10dp"
+	    android:text="Price"
+	    android:textStyle="bold"
+	    android:textColor="@color/primaryTextColor"
+	    android:background="@color/primaryLightColor"/>
+
+	<TextView
+	    android:id="@+id/textViewItemName"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_alignParentBottom="true"
+	    android:text="Name"
+	    android:textSize="16sp"
+	    android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

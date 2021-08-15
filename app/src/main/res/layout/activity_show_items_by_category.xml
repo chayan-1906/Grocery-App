@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowItemsByCategoryActivity">
+
+    <RelativeLayout
+	android:id="@+id/firstRelativeLayout"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_margin="20dp">
+
+	<TextView
+	    android:id="@+id/textViewCategoryExplained"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="Category: " />
+
+	<TextView
+	    android:id="@+id/textViewCategory"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toEndOf="@+id/textViewCategoryExplained"
+	    android:text="name" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+	android:id="@+id/recyclerView"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_below="@+id/firstRelativeLayout"
+	android:layout_margin="10dp" />
+
+</RelativeLayout>

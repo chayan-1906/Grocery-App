@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+	android:id="@+id/nestedScrollView"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_centerVertical="true"
+	android:layout_marginBottom="50dp">
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+
+	    <RelativeLayout
+		android:id="@+id/addressRelativeLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+		    android:id="@+id/textViewAddressExplain"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentStart="true"
+		    android:layout_alignParentTop="true"
+		    android:layout_marginStart="20dp"
+		    android:layout_marginTop="20dp"
+		    android:text="Address: "
+		    android:textSize="16sp"
+		    android:textStyle="bold" />
+
+		<EditText
+		    android:id="@+id/editTextAddress"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/textViewAddressExplain"
+		    android:layout_alignParentStart="true"
+		    android:layout_alignParentEnd="true"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginTop="10dp"
+		    android:layout_marginRight="10dp"
+		    android:hint="address"
+		    android:lines="3" />
+
+	    </RelativeLayout>
+
+	    <RelativeLayout
+		android:id="@+id/zipCodeRelativeLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/addressRelativeLayout"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentEnd="true"
+		android:layout_marginTop="10dp">
+
+		<TextView
+		    android:id="@+id/textViewZipCodeExplain"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentStart="true"
+		    android:layout_alignParentTop="true"
+		    android:layout_marginStart="20dp"
+		    android:layout_marginTop="20dp"
+		    android:text="Zip Code: "
+		    android:textSize="16sp"
+		    android:textStyle="bold" />
+
+		<EditText
+		    android:id="@+id/editTextZipCode"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/textViewZipCodeExplain"
+		    android:layout_alignParentStart="true"
+		    android:layout_alignParentEnd="true"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginTop="10dp"
+		    android:layout_marginRight="10dp"
+		    android:hint="zipcode" />
+
+	    </RelativeLayout>
+
+	    <RelativeLayout
+		android:id="@+id/phoneNumberRelativeLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/zipCodeRelativeLayout"
+		android:layout_marginTop="10dp">
+
+		<TextView
+		    android:id="@+id/textViewPhoneNumberExplain"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginStart="20dp"
+		    android:layout_marginTop="20dp"
+		    android:text="Phone Number: "
+		    android:textSize="16sp"
+		    android:textStyle="bold" />
+
+		<EditText
+		    android:id="@+id/editTextPhoneNumber"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/textViewPhoneNumberExplain"
+		    android:layout_alignParentStart="true"
+		    android:layout_alignParentEnd="true"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginTop="10dp"
+		    android:layout_marginRight="10dp"
+		    android:hint="phone number" />
+
+	    </RelativeLayout>
+
+	    <RelativeLayout
+		android:id="@+id/emailRelativeLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/phoneNumberRelativeLayout"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentEnd="true"
+		android:layout_marginTop="10dp">
+
+		<TextView
+		    android:id="@+id/textViewEmailExplain"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginStart="20dp"
+		    android:layout_marginTop="20dp"
+		    android:text="Email: "
+		    android:textSize="16sp"
+		    android:textStyle="bold" />
+
+		<EditText
+		    android:id="@+id/editTextEmail"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/textViewEmailExplain"
+		    android:layout_alignParentStart="true"
+		    android:layout_alignParentEnd="true"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginTop="10dp"
+		    android:layout_marginRight="10dp"
+		    android:hint="email" />
+
+	    </RelativeLayout>
+
+	    <RelativeLayout
+		android:id="@+id/buttonsRelativeLayout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/emailRelativeLayout"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="10dp">
+
+		<androidx.appcompat.widget.AppCompatButton
+		    android:id="@+id/btnBack"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="@color/primaryColor"
+		    android:text="back"
+		    android:textColor="@color/primaryTextColor" />
+
+		<androidx.appcompat.widget.AppCompatButton
+		    android:id="@+id/btnNext"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginStart="20dp"
+		    android:layout_toEndOf="@+id/btnBack"
+		    android:background="@color/primaryColor"
+		    android:text="next"
+		    android:textColor="@color/primaryTextColor" />
+
+	    </RelativeLayout>
+
+	</RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
